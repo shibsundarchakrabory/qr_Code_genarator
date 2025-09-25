@@ -14,6 +14,9 @@ const qrCode = new QRCodeStyling({
     imageOptions: {
         crossOrigin: "anonymous",
         margin: 20
+    },
+    qrOptions: {
+        errorCorrectionLevel: 'H'
     }
 });
 
@@ -73,7 +76,9 @@ generateBtn.addEventListener("click", () => {
 });
 
 const downloadBtn = document.getElementById("download-btn");
+const downloadFormat = document.getElementById("download-format");
 
 downloadBtn.addEventListener("click", () => {
-    qrCode.download({ name: "qrcode", extension: "png" });
+    const format = downloadFormat.value;
+    qrCode.download({ name: "qrcode", extension: format });
 });

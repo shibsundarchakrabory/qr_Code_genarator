@@ -90,9 +90,9 @@ body {
 
 .color-control {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .color-control label {
@@ -137,6 +137,26 @@ button {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#download-btn {
+    background-color: #28a745; /* Green color for download */
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#download-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+#download-format {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: #333;
 }
 #qrcode {
     margin-top: 20px;
