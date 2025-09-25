@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>QR Code Generator</h1>
+      <input type="text" id="text-input" placeholder="Enter text or URL" />
+      <div class="file-input-container">
+        <label for="logo" class="file-input-label">Choose Logo</label>
+        <input type="file" id="logo" accept="image/*">
+        <span id="file-name"></span>
+        <img id="logo-preview" src="" alt="Logo Preview">
+      </div>
+      <div class="control-panal">
+        <div class="color-control">
+          <label for="color-dark">Color:</label>
+          <input class="QRcolor" type="color" id="color-dark" value="#000000" />
+        </div>
+        <div class="color-control">
+          <label for="color-light">Background:</label>
+          <input
+            class="QRbackground"
+            type="color"
+            id="color-light"
+            value="#ffffff"
+          />
+        </div>
+      </div>
+      <button id="generate-btn">Generate QR Code</button>
+      <div id="qrcode-container">
+        <div id="qrcode"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
