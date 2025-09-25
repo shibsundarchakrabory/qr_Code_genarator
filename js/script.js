@@ -2,6 +2,7 @@
 const qrCode = new QRCodeStyling({
     width: 300,
     height: 300,
+    type: "svg",
     data: "https://www.google.com",
     image: "",
     dotsOptions: {
@@ -76,9 +77,7 @@ generateBtn.addEventListener("click", () => {
 });
 
 const downloadBtn = document.getElementById("download-btn");
-const downloadFormat = document.getElementById("download-format");
 
 downloadBtn.addEventListener("click", () => {
-    const format = downloadFormat.value;
-    qrCode.download({ name: "qrcode", extension: format });
+    qrCode.download({ name: "qrcode", extension: "png" });
 });
